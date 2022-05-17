@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obligatorio Programacion 1</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="contenedor">
+
+        <div id="cabezal" class="clearfix">
+            <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">
+            <ul id="navPrincipal">
+                <div id="divSeccionDocente">
+                    <li>
+                        <a id="btnInformacionEstadisticaDocente">información estadística</a>
+                    </li>
+                    <li>
+                        <a id="btnAsignarUnIdAlumno">Asignar Niveles</a>
+                    </li>
+                    <li>
+                        <a id="btnEjerciciosParaHacerDevolucion">Devoluciones</a>
+                    </li>
+                    <li>
+                        <a id="btnArmarEjercicio">Armar ejercicio</a>
+                    </li>
+                </div>
+
+                <div id="divSeccionAlumno">
+                    <li>
+                        <a id="btnBuscarEj">Buscar Ejercicio</a>
+                    </li>
+                    <li>
+                        <a id="btnEjerciciosResueltos">Ejercicios Resueltos</a>
+                    </li>
+                    <li>
+                        <a id="btnInformacionEstadistica">Informacion Estadistica</a>
+                    </li>
+                    <li>
+                        <a id="btnEntrgaEjercicios">Entrega Ejercicios</a>
+                    </li>
+                </div>
+            </ul>
+
+            <div id="aux">
+                <p id="pBienvenidaUsuario"></p>
+            </div><!-- FIN AUX -->
+            <input type="button" value="logOut" id="btnLogOut">
+        </div><!-- FIN CABEZAL -->
+
+
+
+
+
+        <div id="contenido">
+            <div id="divIngresoAlSistema">
+                <div id="divLogInUsuario">
+                    <h3 id="H3LogIn">LogIn</h3>
+                    <label for="txtNombreUsuarioLogIn">Nombre Usuario</label><br>
+                    <input type="text" id="txtNombreUsuarioLogIn"><br>
+                    <label for="txtPasswordLogIn">Password</label><br>
+                    <input type="password" id="txtPasswordLogIn"><br>
+                    <input type="button" value="LogIn" id="btnLogIn">
+                    <P id="pLogIn"></P>
+                </div>
+
+                <div id="divBotonesInicio">
+                    <h3>Registrarse como: </h3><br>
+                    <input type="button" value="Docente" id="btnIngresoComoDocente">
+                    <input type="button" value="Alumno" id="btnIngresoComoAlumno">
+                </div>
+
+                <div id="divRegistroUsuario">
+                    <h3 id="H3Registro">Registro Usuario</h3>
+                    <label for="txtNombreRegistro">Nombre</label><br>
+                    <input type="text" id="txtNombreRegistro"><br>
+                    <label for="txtNombreUsuarioRegistro">Nombre de Usuario</label><br>
+                    <input type="text" id="txtNombreUsuarioRegistro"><br>
+                    <label for="txtPasswordRegistro">Password</label><br>
+                    <input type="password" id="txtPasswordRegistro"><br>
+                    <!-- SI ES ALUMNO -->
+                    <div id="divRegistroDocenteAlumno">
+
+                    </div>
+                    <!-- FIN SI ES ALUMNO -->
+                    <input type="button" value="Registrarse alumno" id="btnRegistrarseAlumno">
+                    <input type="button" value="Registrarse docente" id="btnRegistrarseDocente">
+                    <P id="pRegistrarse"></P>
+                </div>
+            </div>
+            <!-- FIN LOGIN Y REGISTRO -->
+
+            <hr>    
+
+            <!-- INTERFAZ DOCENTE -->
+            <div id="divInterfazDocente">
+
+                <div id="divAsignarNivel">
+
+                    <p id="pAsignarNivel"></p>
+                </div>
+
+                <div id="divArmarEjercicio">
+                    <h3>Plantear ejercicios</h3>
+                    <label for="txtTituloEjercicio">Titulo Ejericicio</label><br>
+                    <input type="text" id="txtTituloEjercicio"><br>
+                    <!-- IMAGEN -->
+                    <label for="inputImagenEjercicio">Ingrese imagen de ejercicio</label><br>
+                    <input type="file" id="inputImagenEjercicio"><br>
+                    <label for="txtDescripcionEjercicio">Descripcion Ejericicio</label><br>
+                    <input type="text" id="txtDescripcionEjercicio"><br>
+                    <label for="slcNivel">Nivel del ejercicio</label><br>
+                    <select id="slcNivel">
+                        <option value="ndf">...</option>
+                        <option value="inicial">Inicial</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select><br>
+                    <input type="button" value="Ingresar ejercicio" id="btnIngresarEjercicio"><br>
+                    <p id="pIngresarEjercicio"></p><br>
+                </div>
+
+                <div id="divRedactarDevolucion">
+                    <h3>Redactar devoluciones</h3>
+                    <!-- SE VA A ARMAR LA TABLA -->
+
+                </div>
+                <div id="divResultadoRedactarDevolucion">
+                </div>
+
+                <div id="divInformacionEstadisticaDocente">
+                    <h3>Visualizar información estadística</h3>
+                    <label for="btnAlumnoMasEjercicios">Ver el alumnos que realizo mas ejercicios</label><br>
+                    <input type="button" value="Calcular" id="btnAlumnoMasEjercicios"><br>
+                    <p id="pAlumnoMasEjercicios"></p><br>
+                    <label for="btnCantidadEjerciciosEntregados">Ver cantidad ejercicios entregados</label><br>
+                    <input type="button" value="Calcular" id="btnCantidadEjerciciosEntregados"><br>
+                    <p id="pCantidadEjerciciosEntregados"></p><br>
+                    <label for="btnEjerciciosResueltosDelAlumno">Ver ejercicios resueltos por un alumno</label><br>
+                    <div id="divSlcSeleccionAlumnosEstadisticas"></div>
+                    <input type="button" value="Calcular" id="btnEjerciciosResueltosDelAlumno"><br>
+                    <p id="pEjerciciosResueltos"> </p>
+                </div>
+            </div>
+            <!-- FIN INTERFAZ DOCENTE -->
+
+
+            <!-- INTERFAZ ALUMNO -->
+
+
+            <div id="divInterfazAlumno">
+                <div id="divVerEjerciciosParaAlumno">
+
+
+                </div>
+                <div id="divEntregaEjercicio">
+
+                </div>
+                <br>
+
+                <div id="divBuscarEjerciciosPlanteados">
+                    <h3>Buscar Ejercicios</h3>
+                    <label for="txtBuscarEjercicioAlumno">Buscar ejercicio</label><br><br><br>
+                    <input type="text" id="txtBuscarEjercicioAlumno" placeholder="buscar ejercicio"><br>
+                    <input type="button" value="Buscar" id="btnBuscarEjercicioAlumno">
+                    <div id="divEjerciciosBuscados">
+                        
+                    </div>
+                    <p id="pResultadoBusquedaEjercicios"></p>
+                </div>
+
+
+                <div id="divVerEjerciciosResueltos">
+                  
+                    <p id="pVerEjerciciosResueltos"></p>
+                </div>
+
+                <div id="divEstadisticasAlumno">
+                    <h3>Infromacion Estadistica</h3>
+                    <label for="btnVerPorcentajeEjerciciosResueltos">Ver Porcentaje Ejercicios Resueltos</label><br>
+                    <input type="button" value="Calcular" id="btnVerPorcentajeEjerciciosResueltos"><br>
+                    <p id="pVerPorcentajeEjerciciosResueltos"></p>
+                    <label for="btnCalcularDevolucion">Ver Ejercicios con y sin devolucion</label><br>
+                    <input type="button" value="Calcular" id="btnCalcularDevolucion"><br>
+                    <p id="pCalcularDevolucion"></p>
+                </div>
+
+            </div>
+
+
+            <!-- EJERCICIOS -->
+            <div id="divEjercicios" class="ejercicios">
+                <div>
+                    <h2>Ejercicio 1</h2>
+                    <img src="https://develotion.com/assets/img/ej1.png">
+                    <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor
+                        mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis,
+                        dignissim augue.</p>
+                    <input type="button" value="Hacer entrega">
+                </div>
+                <hr>
+                <div>
+                    <h2>Ejercicio 4</h2>
+                    <img src="https://develotion.com/assets/img/ej1.png">
+                    <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor
+                        mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis,
+                        dignissim augue.</p>
+                    <input type="button" value="Hacer entrega">
+                </div>
+            </div>
+            <!--FIN EJERCICIOS-->
+        </div><!-- FIN CONTENIDO -->
+
+
+        <div id="pie">
+            <a>Obligatorio</a>
+        </div><!-- FIN PIE -->
+    </div><!-- FIN CONTENEDOR -->
+
+
+
+
+
+
+    <script src="js/estructuras.js"></script>
+    <script src="js/cargaDatos.js"></script>
+    <script src="js/codigo.js"></script>
+</body>
+
+</html>
+
+
